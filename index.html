@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,135 +7,25 @@
 
 <link rel="stylesheet" href="style.css">
 </head>
-
-<body>
-
-<header>
-
-<nav class="navbar">
-<button id="darkModeBtn" onclick="toggleDarkMode()">🌙</button>
-<div id="dateTime"></div>
-
-<div class="logo">
-<span>🇵🇰 PakCareerHub</span>
-</div>
-
-<ul>
-<li><a href="#">Home</a></li>
-<li><a href="results.html">Results</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-
-</nav>
-
-</header>
-
-<!-- HERO SECTION -->
-<section class="hero">
-
-<h1>Latest Jobs in Pakistan</h1>
-<p>Government, Private, Army, Navy, Police Jobs & More</p>
-
-<input type="text" placeholder="Search Jobs..." class="search-box">
-<button onclick="searchJobs()">Search Jobs</button>
-
-</section>
-
-<!-- CATEGORIES -->
-<section class="categories">
-
-<h2>Top Job Categories</h2>
-
-<div class="category-grid">
-
-<div class="category">🪖 Army Jobs</div>
-<div class="category">⚓ Navy Jobs</div>
-<div class="category">✈️ Air Force Jobs</div>
-<div class="category">👮 Police Jobs</div>
-<div class="category">🏛 Government Jobs</div>
-<div class="category">🏦 Bank Jobs</div>
-
-</div>
-
-</section>
-
-<!-- JOBS -->
-<section class="jobs">
-
-<h2>Latest Jobs</h2>
-
-<table border="1">
-<tr>
-<th>Department</th>
-<th>Last Date</th>
-<th>Status</th>
-</tr>
-
-<tr>
-<td>Pakistan Army</td>
-<td>20 July 2026</td>
-<td>Open</td>
-</tr>
-
-<tr>
-<td>Pakistan Navy</td>
-<td>25 July 2026</td>
-<td>Open</td>
-</tr>
-
-<tr>
-<td>NADRA</td>
-<td>30 July 2026</td>
-<td>Open</td>
-</tr>
-
-</table>
-
-</section>
-
-<!-- FEATURED -->
-<section class="featured">
-
-<h2>Featured Jobs</h2>
-
-<div class="card">
-<h3>Pakistan Army Jobs</h3>
-<a href="army.html">View Details</a>
-</div>
-
-<div class="card">
-<h3>Pakistan Navy Jobs</h3>
-<a href="#">View Details</a>
-</div>
-
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-
-<h3>PakCareerHub</h3>
-<p>Your Trusted Jobs Portal</p>
-
-<p>© 2026 PakCareerHub. All Rights Reserved.</p>
-
-</footer>
-
 <script src="script.js"></script>
+<button onclick="topFunction()" id="topBtn">⬆</button>
+<footer class="footer">
+  <h3>PakCareerHub</h3>
+  <p>Your Trusted Jobs & Career Portal</p>
 
-</body>
-</html>
+  <div class="footer-links">
+    <a href="about.html">About Us</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms & Conditions</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <p>© 2026 PakCareerHub. All Rights Reserved.</p>
 </footer>
-<a href="https://wa.me/923401937500?text=Assalam-o-Alaikum%20I%20need%20help%20regarding%20jobs%20on%20PakCareerHub." class="floating-whatsapp" target="_blank">
-💬
-</a>
 <body>
 
 <header>
-<div class="news-ticker">
-    <marquee behavior="scroll" direction="left">
-        🔥 Pakistan Army Jobs Open | ⚓ Pakistan Navy Registration Started | ✈️ PAF Jobs Announced | 👮 KP Police Recruitment | 🆔 NADRA Vacancies | ⚡ WAPDA Jobs | 🏛️ FIA Jobs | 🏦 Bank Jobs
-    </marquee>
-</div>
+
 <nav class="navbar">
 <button id="darkModeBtn" onclick="toggleDarkMode()">🌙</button>
 <div id="dateTime"></div>
@@ -156,7 +45,7 @@
 <li><a href="#">Internships</a></li>
 
 <a href="contact.html">Contact</a>
-<a href="latest-jobs.html">Latest Jobs</a>
+
 </ul>
 
 </nav>
@@ -224,8 +113,7 @@
 <h1>Latest Jobs in Pakistan</h1>
 Apply for Government, Private, Armed Forces, Police, Education, Health and many more jobs across Pakistan.
 <p>Find Government, Private, Army, Navy, Air Force, Bank and Internship Opportunities.</p>
-<input type="text" id="jobSearch" placeholder="Search jobs..."
-onkeyup="searchJobs()">
+<input type="text" placeholder="Search Jobs..." class="search-box">
 
 <br><br>
 <button onclick="searchJobs()">Search Jobs</button>
@@ -336,29 +224,24 @@ onkeyup="searchJobs()">
 </div>
 
 <div class="card">
-<div class="job">
-<h2>⚓ Pakistan Navy Jobs</h2>
-...
-</div>
+
 <h3>Pakistan Navy Jobs</h3>
 
 <p>Latest Navy recruitment updates.</p>
 <div class="buttons">
 <a href="#">View Details</a>
 <a href="https://joinpaknavy.gov.pk" target="_blank">Apply Now</a>
-<a href="navy.html" class="details-btn">View Details</a>
 </div>
 </div>
 
 <div class="card">
-class="job"
+
 <h3>Pakistan Air Force Jobs</h3>
 
 <p>Join PAF with the newest opportunities.</p>
 <div class="buttons">
 <a href="#">View Details</a>
 <a href="https://joinpaf.gov.pk" target="_blank">Apply Now</a>
-<a href="airforce.html" class="details-btn">View Details</a>
 </div>
 </div>
 
