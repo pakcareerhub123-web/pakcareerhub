@@ -1,7 +1,6 @@
 import { db } from "./firebase.js";
-alert("dashboard.js loaded");
 import { ref, push } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-database.js";
-
+alert("dashboard.js loaded");
 const saveBtn = document.getElementById("saveJob");
 const message = document.getElementById("message");
 
