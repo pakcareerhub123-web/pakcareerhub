@@ -4,7 +4,7 @@ const saveBtn = document.getElementById("saveJob");
 const message = document.getElementById("message");
 
 saveBtn.addEventListener("click", () => {
-
+alert("Save button clicked");
   const title = document.getElementById("jobTitle").value.trim();
   const department = document.getElementById("department").value;
   const lastDate = document.getElementById("lastDate").value;
