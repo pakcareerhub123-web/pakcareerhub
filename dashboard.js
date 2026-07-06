@@ -1,31 +1,48 @@
-import { database } from "./firebase.js";
+import { db } from "./firebase.js";
+alert("dashboard.js loaded");
 import { ref, push } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-database.js";
 
 const saveBtn = document.getElementById("saveJob");
+const message = document.getElementById("message");
 
 saveBtn.addEventListener("click", () => {
 
-    const job = {
-        title: document.getElementById("jobTitle").value,
-        department: document.getElementById("department").value,
-        lastDate: document.getElementById("lastDate").value,
-        status: document.getElementById("status").value,
-        applyLink: document.getElementById("applyLink").value
-    };
+  const title = document.getElementById("jobTitle").value.trim();
+  const department = document.getElementById("department").value;
+  const lastDate = document.getElementById("lastDate").value;
+  const status = document.getElementById("status").value;
+  const applyLink = document.getElementById("applyLink").value.trim();
 
-    push(ref(database, "jobs"), job)
+  if (!title || !department || !lastDate || !applyLink) {
+    message.style.color = "red";
+    message.innerHTML = "Please fill all required fields.";
+    return;
+  }
+
+  const job = {
+    title,
+    department,
+    lastDate,
+    status,
+    applyLink,
+    whatsapp: "https://wa.me/923401937500",
+    createdAt: Date.now()
+  };
+
+  push(ref(db, "jobs"), job)
     .then(() => {
-        document.getElementById("message").innerHTML = "✅ Job Saved Successfully!";
-        document.getElementById("message").style.color = "green";
+      message.style.color = "green";
+      message.innerHTML = "✅ Job Saved Successfully!";
 
-        document.getElementById("jobTitle").value = "";
-        document.getElementById("department").value = "";
-        document.getElementById("lastDate").value = "";
-        document.getElementById("applyLink").value = "";
+      document.getElementById("jobTitle").value = "";
+      document.getElementById("department").value = "";
+      document.getElementById("lastDate").value = "";
+      document.getElementById("status").value = "";
+      document.getElementById("applyLink").value = "";
     })
     .catch((error) => {
-        document.getElementById("message").innerHTML = error.message;
-        document.getElementById("message").style.color = "red";
+      message.style.color = "red";
+      message.innerHTML = error.message;
     });
 
 });

@@ -1,5 +1,2 @@
 User-agent: *
-
 Allow: /
-
-Sitemap: https://pakcareerhub123-web.github.io/pakcareerhub/sitemap.xml
